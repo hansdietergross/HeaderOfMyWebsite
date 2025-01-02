@@ -1,0 +1,86 @@
+:root {
+    /* Base colors */
+    --color-blue: #1890ff;
+    --color-purple: #8A2BE2;
+    --color-gold: #FFD700;
+
+    /* Gradients */
+    --gradient-blue: radial-gradient(ellipse at right top, #00458f8f 0%, #151419 45%, #151419 100%), 
+                    linear-gradient(45deg, #232228, #232228, #232228, #232228, var(--color-blue));
+    --gradient-purple: radial-gradient(ellipse at right top, #8A2BE280 0%, #151419 47%, #151419 100%), 
+                    linear-gradient(45deg, #232228, #232228, #232228, #232228, var(--color-purple));
+    --gradient-gold: radial-gradient(ellipse at right top, #FFD70080 0%, #151419 47%, #151419 100%), 
+                    linear-gradient(45deg, #232228, #232228, #232228, #232228, var(--color-gold));
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    background: #232228;
+    color: #fff;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 920px;
+    height: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 0;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    margin: 10px 0 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    background-image: var(--card-bg-image);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    color: var(--card-color);
+    margin: 0 0 15px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.card-content {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0.9;
+}
